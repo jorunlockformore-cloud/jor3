@@ -1,0 +1,21 @@
+# JÖR Water
+
+> JÖR (pronounced "Jor") is a premium packaged drinking water brand from India. It is treated and mineral-balanced with salts of calcium, magnesium and potassium for a crisp, clean taste, and sealed fresh in a diamond-cut bottle. Brand line: "Ask for Jör, Unlock more."
+
+## Product
+- JÖR Premium Drinking Water, 250 ml bottle
+- Ingredients: treated water, salts of calcium, magnesium and potassium
+- Tamper-evident cap; batch number and packing date printed on every cap and neck
+- Best before six months from packing date
+
+## Licensing and manufacturing
+- FSSAI Lic. No. 13326011000199
+- Manufactured by Santy Gulia Enterprises, Tajpur Khurd Extn, South West Delhi 110071, India
+- Packed by Sambu Enterprises, Bareilly, Uttar Pradesh, India
+
+## Who it is for
+- Hotels, restaurants, cafés, offices and event organisers who want a premium water for their guests, plus everyday drinkers
+
+## Contact
+- Website: https://jor3.vercel.app/
+- Partner and supply enquiries: WhatsApp +91 9009800802 — https://wa.me/919009800802
