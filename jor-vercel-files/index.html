@@ -176,6 +176,63 @@ footer .legal{text-align:right;align-self:end}
   footer .legal{text-align:left}
 }
 @media (prefers-reduced-motion:reduce){.fact{transition:none}.hint i{animation:none}}
+/* Phone and tablet layout: readable sections without scroll-pinned scenes. */
+@media (max-width:820px){
+  html{scroll-padding-top:96px}
+  .nav{padding:calc(12px + env(safe-area-inset-top,0px)) 20px 16px;background:linear-gradient(#000 40%,rgba(0,0,0,.85) 75%,transparent)}
+  .brand img{height:32px}
+  .nav .cta{min-height:44px;padding:0 16px;font-size:14px;white-space:nowrap}
+  .heroV{height:auto;min-height:0;display:flex;flex-direction:column;padding:calc(88px + env(safe-area-inset-top,0px)) 20px 48px}
+  .heroV .kicker{position:static;order:0;font-size:11px;letter-spacing:.18em;margin:8px 0 20px}
+  .heroVid{position:relative;inset:auto;order:1;width:calc(100% + 40px);height:auto;aspect-ratio:16/9;object-fit:contain;margin:0 -20px;background:#000}
+  .heroV .shade,.heroV .hint{display:none}
+  .heroV .lines{position:static;order:2;margin-top:28px}
+  .heroV h1{font-size:clamp(56px,17vw,92px);line-height:.9}
+  .heroV h1 .sub{font-size:.43em;margin-top:.35em}
+  .show,.brandRev,.facts{height:auto}
+  .show .stage,.brandRev .stage,.facts .stage{position:relative;height:auto;min-height:0;overflow:hidden;padding:56px 20px}
+  .show .stage{display:flex;flex-direction:column;align-items:center}
+  .show .glow{width:100%;height:360px;top:220px;left:50%!important}
+  .sb{position:relative;left:auto;top:auto;height:auto;width:min(86vw,320px);transform:none!important;margin:0 auto 20px}
+  .show .sweep{display:none}
+  .show .chip{position:relative;inset:auto!important;opacity:1;transform:none;margin:4px 0;padding:9px 16px;font-size:14px;backdrop-filter:none;-webkit-backdrop-filter:none}
+  .show .lines{position:relative;inset:auto;width:100%;margin-top:32px;text-align:center}
+  .show .lines h2{font-size:clamp(40px,12vw,64px)!important;line-height:.96}
+  .show .line{position:static;opacity:1!important;transform:none!important;white-space:normal}
+  .show .line2{margin-top:14px;color:var(--sky)}
+  .show .side{position:relative;inset:auto;width:100%;max-width:36ch;opacity:1!important;margin:24px 0 0;text-align:center;font-size:16px}
+  .show .side b{font-size:20px;margin-bottom:8px}
+  .brandRev .stage{display:flex;flex-direction:column;align-items:center;gap:28px}
+  .brandRev .veil{opacity:1;transform:none}
+  .logoRev{position:relative;left:auto;top:auto;width:min(84vw,360px);transform:none}
+  .logoRev img{opacity:1!important;transform:none!important;filter:none!important;transition:none!important}
+  .lgTag{position:relative;inset:auto;opacity:1!important;transform:none!important;font-size:11px;line-height:1.6;letter-spacing:.18em}
+  .brandRev .bar{display:none}
+  .facts .stage{display:block}
+  .fBottle{height:300px;max-width:100%;margin:0 auto 32px;transform:none!important}
+  .spl,.facts .progress{display:none}
+  .factList{height:auto;width:100%}
+  .fact{position:relative;inset:auto;opacity:1!important;transform:none!important;transition:none;align-items:flex-start;text-align:left;gap:16px;padding:28px 0;border-top:1px solid var(--line)}
+  .fact:last-child{padding-bottom:0}
+  .fact h2{font-size:clamp(32px,9.5vw,56px);line-height:1;overflow-wrap:break-word}
+  .fact p{font-size:17px;line-height:1.65;max-width:38ch}
+  .marquee{padding:24px 0}.track{font-size:36px;transform:none!important}
+  .faq{padding:56px 20px;gap:32px;min-width:0}
+  .faq h2{font-size:clamp(42px,12vw,64px);line-height:.98}
+  .faq .about{font-size:17px;line-height:1.65;margin-top:24px}
+  .qa{min-width:0}.qa summary{font-size:16px;line-height:1.5;padding:20px 0;gap:16px;min-height:52px}
+  .qa summary::after{flex-shrink:0}.qa p{font-size:16px;line-height:1.65}
+  .partner{margin:0 12px;padding:40px 20px;gap:28px;border-radius:20px;scroll-margin-top:96px}
+  .partner h2{font-size:clamp(42px,12vw,64px);line-height:.98;overflow-wrap:break-word}
+  .partner p{font-size:17px;line-height:1.65;margin-bottom:24px}
+  .btn{min-height:56px;font-size:16px;white-space:normal;padding:14px 16px}
+  .partner .btn+p{font-size:15px;margin:20px 0 0;overflow-wrap:anywhere}
+  footer{margin-top:56px;padding:48px 20px calc(28px + env(safe-area-inset-bottom,0px));gap:28px}
+  .flogo{width:180px;max-width:100%;margin-bottom:20px}
+  footer .legal{font-size:13px;overflow-wrap:anywhere}
+  footer .bottom{gap:12px;line-height:1.6}
+}
+
 </style>
 </head>
 <body>
@@ -319,7 +376,7 @@ footer .legal{text-align:right;align-self:end}
         c.fillStyle=gr;c.beginPath();c.arc(d.x,d.y,d.r,0,7);c.fill();}}
     if(drops.length>900)drops.splice(0,drops.length-900);
   }
-  if(!reduce){requestAnimationFrame(splashFrame);}
+  if(!reduce && !matchMedia('(max-width:820px)').matches){requestAnimationFrame(splashFrame);}
 
 
   // hero video: respect reduced motion, pause when off-screen to save battery
@@ -329,6 +386,7 @@ footer .legal{text-align:right;align-self:end}
 
   function render(){
     ticking=false;
+    if(matchMedia('(max-width:820px)').matches) return;
     // brand reveal in three scroll steps: letters, ring, tagline
     { const br=$('brandRev'),r=br.getBoundingClientRect();
       if(r.bottom>0&&r.top<innerHeight){ const p=reduce?1:prog(br), on=r.top<innerHeight*0.35;
