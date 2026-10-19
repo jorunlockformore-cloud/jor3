@@ -1,0 +1,6 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": null,
+  "buildCommand": "cp google71ef1b5539713a69.html jor-vercel-files/google71ef1b5539713a69.html",
+  "outputDirectory": "jor-vercel-files"
+}
